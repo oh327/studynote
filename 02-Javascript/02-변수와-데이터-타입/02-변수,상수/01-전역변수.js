@@ -22,7 +22,7 @@ console.log(myNumber2);
 // 이는 일반적인 프로그래밍 언어의 규칙에 위배되므로 전역변수를 위한 `var` 키워드의 사용은
 // 권장되지 않는다.
 var myNumber3 = 300;
-console.log(myNumber);
+console.log(myNumber3);
 
 // 동일한 변수 재선언
 var myNumber3 = 789;
