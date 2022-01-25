@@ -33,14 +33,14 @@ console.group("2) 같다");
     console.groupEnd();
 
     console.group("데이터 타입까지 비교하는 경우");
-        console.log(a1 === a2);  // 두 값이 같으므로 결과는 false
-        console.log(a1 === a3);  // 두 값이 같으므로 결과는 false
-        console.log(a1 === a4);  // 두 값이 같으므로 결과는 false
+        console.log(a1 === a2);  // 두 값이 다르므로 결과는 false
+        console.log(a1 === a3);  // 두 값이 다르므로 결과는 false
+        console.log(a1 === a4);  // 두 값이 다르므로 결과는 false
 
         console.log(a2 === a3);  // 두 값이 같으므로 결과는 true
-        console.log(a2 ===a4);  // 두 값이 같으므로 결과는 false
+        console.log(a2 ===a4);  // 두 값이 다르므로 결과는 false
         
-        console.log(a3 === a4);  // 두 값이 같으므로 결과는 false
+        console.log(a3 === a4);  // 두 값이 다르므로 결과는 false
     console.groupEnd();
 console.groupEnd();
 
@@ -66,7 +66,7 @@ console.group("3) 다르다");
         console.log(b1 !== b3);  // 두 값이 다르므로 결과는 true
         console.log(b1 !== b4);  // 두 값이 다르므로 결과는 true
         
-        console.log(b2 !== b3);  // 두 값이 다르므로 결과는 false
+        console.log(b2 !== b3);  // 두 값이 같으므로 결과는 false
         console.log(b2 !== b4);  // 두 값이 다르므로 결과는 true
 
         console.log(b3 !== b4);  // 두 값이 다르므로 결과는 true
