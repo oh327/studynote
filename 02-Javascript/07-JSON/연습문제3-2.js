@@ -1,3 +1,4 @@
+// 최대값을 구하라는 문제.
 covid19 = [
     {date: '0125', active: 426}, 
     {date: '0126', active: 343}, 
@@ -13,6 +14,7 @@ let max_active = covid19[0].active;
 let max_date = covid19[0].date;
 
 for (const j of covid19) {
+    //console.log(j);
     if (max_active < j.active) {
         max_active = j.active;
         max_date= j.date;

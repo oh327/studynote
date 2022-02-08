@@ -9,9 +9,11 @@ covid19 = [
     {date: '0201', active: 299}
 ]
 
+// 전체 확진자 수를 위한 합계 변수
 let sum = 0;
 
 for (const j of covid19) {
+    // console.log(j.active);
     sum += j.active;
 }
 
