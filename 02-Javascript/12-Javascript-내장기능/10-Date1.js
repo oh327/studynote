@@ -11,7 +11,7 @@ const date1 = new Date();
 
 /** 년, 월, 일, 시간, 분, 초를 리턴 받기 */
 const yy = date1.getFullYear();
-// 월은 0일 1월 11이 12월을 의미한다.
+// 월은 0이 1월 11이 12월을 의미한다.
 const mm = date1.getMonth() + 1;
 const dd = date1.getDate();
 
