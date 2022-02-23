@@ -42,10 +42,10 @@ const a1 = [1, 2, 3];
 const a2 = new Array(a1.length);
 
 // 배열을 온전히 값복사하기 위해서는 원소끼리 개별복사 해야 함
+
 for (let i=0; i<a1.length; i++) {
     a2[i] = a1[i];
 }
-
 // 배열객체가 갖는 메서드를 활용한 깊은 복사 방법
 const a3 = a1.slice();
 
