@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <style>
+        .container {
+            /* (추가) .logo의 좌표 기준점 설정 */
+            position:relative;
+            width:1000px;
+            height:150px;
+            margin:auto;
+            background-color:#eee;
+        }
+
+        .logo {
+            position:absolute;
+            left:50%;
+            top:50%;
+            width:300px;
+            height:100px;
+            margin-left:-150px;
+            margin-top:-50px;
+            background-color:#ff6600;
+        }
+
+        .side1 {
+            /* (추가) */
+            position:absolute;
+            left:50%;
+            top:50%;
+            width:80px;
+            height:80px;
+            margin-left:-240px;
+            margin-top:-40px;
+            background-color:#ff00ff;
+        }
+
+        .side2 {
+            /* (추가) */
+            position:absolute;
+            left:50%;
+            top:50%;
+            width:80px;
+            height:80px;
+            margin-left:160px;
+            margin-top:-40px;
+            background-color:#00ff00;
+        }
+    </style>
+</head>
+<body>
+    <!-- float 사용 안함 -->
+    <div class="container">
+        <div class="logo">logo</div>
+        <div class="side1">side1</div>
+        <div class="side2">side2</div>
+    </div>
+</body>
+</html>

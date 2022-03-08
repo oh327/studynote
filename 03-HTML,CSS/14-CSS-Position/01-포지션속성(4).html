@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CSS Example</title>
+    <!-- 스타일시트 -->
+    <style type="text/css">
+        #parent {
+            /* 부모에게 position 속성이 부여되면, 부모를 기준으로 좌표를 설정한다. */
+            position:relative;
+            width:500px;
+            height:300px;
+            margin:auto;
+            background-color:#f0f;
+        }
+        #child {
+            /* 기본적으로 absolute 방식은 브라우저의 끝을 기준으로 좌표를 설정한다. */
+            position:absolute;
+            top:10px;
+            right:10px;
+            width:100px;
+            height:100px;
+            background-color:#0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

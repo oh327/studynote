@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CSS Example</title>
+    <!-- 스타일시트 -->
+    <style type="text/css">
+        /* 공통 초기화 */
+        * {
+            padding:0;
+            margin:0;
+        }
+        ul {
+            list-style:none;
+        }
+
+        /* 아이콘 그룹 박스 > 개별 아이콘 박스 */
+        #icon_list li {
+            float:left;
+            width:25%;
+            height:96px;
+            cursor:pointer;
+        }
+
+        /* 아이콘 그룹 박스 > 개별 아이콘 박스 > 링크 */
+        #icon_list a {
+            /** 클릭 영역은 고정 사이즈, li 박스의 중앙 */
+            display:block;
+            width:75px;
+            height:81px;
+            padding-top:15px;
+            margin:auto;
+            /** 텍스트 꾸미기 */
+            color:#333;
+            font:12px '굴림';
+            text-decoration:none;
+        }
+        
+        /* 아이콘 그룹 박스 > 개별 아이콘 박스 > 링크 > 아이콘 박스 */
+        #icon_list .icon {
+            /** 아이콘의 크기만큼 사이즈 지정 */
+            display:block;
+            width:56px;
+            height:56px;
+            /** 배경이미지 적용 및 중앙 정렬 */
+            margin:auto;
+            background:url(img/icon.png) no-repeat;
+        }
+        
+        /* 아이콘 그룹 박스 > 개별 아이콘 박스 > 링크 > 텍스트 박스 */
+        #icon_list .txt {
+            /** 가로 가득 채움 */
+            display:block;
+            width:auto;
+            /** 상단 여백 > 아이콘과 살짝 떨어지도록... */
+            padding-top:5px;
+            /** 텍스트는 중앙 */
+            text-align:center;
+        }
+
+        /* 개별 아이콘 좌표 처리 */
+        #icon_list #icon1 {
+            background-position:0 0;
+        }
+        #icon_list #icon2 {
+            background-position:-58px 0;
+        }
+        #icon_list #icon3 {
+            background-position:-115px 0;
+        }
+        #icon_list #icon4 {
+            background-position:-172px 0;
+        }
+        #icon_list #icon5 {
+            background-position:0 -57px;
+        }
+        #icon_list #icon6 {
+            background-position:-58px -57px;
+        }
+        #icon_list #icon7 {
+            background-position:-115px -57px;
+        }
+        #icon_list #icon8 {
+            background-position:-172px -57px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="icon_list">
+        <li>
+            <a href="#">
+                <span id="icon1" class="icon"></span>
+                <span class="txt">전화걸기</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon2" class="icon"></span>
+                <span class="txt">트위터</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon3" class="icon"></span>
+                <span class="txt">페이스북</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon4" class="icon"></span>
+                <span class="txt">메일</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon5" class="icon"></span>
+                <span class="txt">RSS</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon6" class="icon"></span>
+                <span class="txt">음악</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon7" class="icon"></span>
+                <span class="txt">검색</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span id="icon8" class="icon"></span>
+                <span class="txt">홈</span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
