@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+/* 전체 공통 내용 
+ ------------------------------------ */
+* {
+    font-family:"Nanum Gothic", "맑은고딕", "굴림", "Helvetica";
+}
+a {
+    color:#222;
+    text-decoration:none;
+}
+hr {
+    display:none;
+}
+
+/* 상단 bar
+ ------------------------------------ */
+#header {
+    height:49px;
+    border-bottom:1px solid #000;
+    background:url(../img/bg_header.gif) repeat-x;
+}
+
+/* 상단 bar > 로고
+ ------------------------------------ */
+#header h1 {
+    position:absolute;
+    top:13px;
+    left:10px;
+    width:71px;
+    height:24px;
+}
+
+/* 상단 bar > Home 버튼
+ ------------------------------------ */
+#header span {
+    display:block;
+    position:absolute;
+    top:12px;
+    right:10px;
+    width:48px;
+    height:26px;
+}
+
+/* 하단
+ ------------------------------------ */
+#footer {
+    width:auto;
+    text-align:center;
+}
+
+/* 하단 > 버튼셋
+ ------------------------------------ */
+#footer ul {
+    margin:5px auto;
+}
+
+/* 하단 > 버튼셋 > 개별항목
+ ------------------------------------ */
+#footer ul li {
+    display:inline;
+    padding:0 2px;
+}
+
+/* 하단 > 카피라이트
+ ------------------------------------ */
+#footer address {
+    width:auto;
+    height:35px;
+    background-color:#ccc;
+    color:#666;
+    font-size:.8em;
+    line-height:35px;
+}

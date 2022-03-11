@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* 본문영역
+ ------------------------------------ */
+#content {
+    width:300px;
+    margin:0 auto 15px;
+    font-size:.8em;
+    line-height:150%;
+
+}
+
+/* 페이지 소제목
+ ------------------------------------ */
+#content h2 {
+    height:90px;
+    margin-top:15px;
+    background:url(../img/top_bc.jpg) no-repeat;
+    text-indent:-10000px;
+}
+ 
+/* 본문영역 > 주제어
+ ------------------------------------ */
+#content h3 {
+    width:300px;
+    height:35px;
+    margin-bottom:5px;
+    background-color:#f60;
+    color:#fff;
+    font:bold 1.2em/35px "Helvetical";
+    text-align:center;
+}
+ 
+/* 본문영역 > 아이콘
+ ------------------------------------ */
+#content p.right {
+    margin-bottom:5px;
+    text-align:right;
+}
+#content p.right img {
+    vertical-align:middle;
+}
+ 
+/* 본문영역 > 표 > 제목
+ ------------------------------------ */
+#content table caption {
+    display:none;
+}
+ 
+/* 본문영역 > 표 > 헤더
+ ------------------------------------ */
+#content table thead th {
+    width:100px;
+}
+ 
+/* 본문영역 > 표 ... 모든 칸
+ ------------------------------------ */
+#content table th, #content table td {
+    border-bottom:1px solid #999;
+    text-align:center;
+}
+ 
+/* 본문영역 > 표 ... 아이콘 이미지
+ ------------------------------------ */
+#content table img {
+    margin-right:3px;
+    vertical-align:middle;
+}
