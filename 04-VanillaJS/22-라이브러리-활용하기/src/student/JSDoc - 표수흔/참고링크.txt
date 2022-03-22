@@ -1,3 +1,0 @@
-https://github.com/jsdoc/jsdoc   공식 깃헙
-https://jsdoc.app/   태그 종류 
-
