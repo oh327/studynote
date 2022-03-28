@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <style>
+        .collapsible-title {
+            width:100%;
+            padding:18px;
+            margin:0;
+            border:none;
+            background-color:#777;
+            color:white;
+            font-size:15px;
+            font-weight:normal;
+            text-align:left;
+            outline:none;
+            cursor:pointer;
+        }
+
+        .active,
+        .collapsible-title:hover {
+            background-color:#555;
+        }
+
+        .content {
+            max-height:0;
+            padding:0 18px;
+            background-color:#f1f1f1;
+            overflow:hidden;
+            transition:max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animated Collapsibles</h1>
+    <p>A Collapsible:</p>
+    <div class="collapse">
+        <h2 class="collapsible-title">Open Collapsible</h2>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    
+    <div class="collapse">
+        <h2 class="collapsible-title">Open Collapsible</h2>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    
+    <div class="collapse">
+        <h2 class="collapsible-title">Open Collapsible</h2>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    
+    <div class="collapse">
+        <h2 class="collapsible-title">Open Collapsible</h2>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    
+    <div class="collapse">
+        <h2 class="collapsible-title">Open Collapsible</h2>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".collapsible-title").forEach((v, i) => {
+            v.addEventListener("click", e => {
+                // 클릭 된 자기 자신
+                const current = e.currentTarget;
+                // 스스로에게 active클래스에 대한 적용 여부 변경
+                current.classList.toggle("active");
+
+                // 클릭 된 자신의 상위 요소인 <div class="collapse">
+                const parent = current.closest(".collapse");
+
+                // 제어할 대상을 탐색
+                const content = parent.querySelector(".content");
+
+                // content에 maxHeight 속성이 있다면 (혹은 0이 아니라면)
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+                        
+            });
+        });
+    </script>
+</body>
+</html>
