@@ -1,0 +1,86 @@
+body {
+    padding:0;
+    margin:0;
+}
+.container {
+    width:640px;
+    padding:20px 0;
+    margin:auto;
+}
+.container header h1 {
+    color:#06f;
+    font-size:28px;
+}
+.container footer address {
+    display:block;
+    color:#555;
+    font-size:12px;
+    text-align:center;
+}
+.container section {
+    margin-bottom:20px;
+}
+.container .table {
+    width:100%;
+    border-top:1px solid #444;
+    border-collapse:collapse;
+    font-size:14px;
+}
+.container .table th,
+.container .table td {
+    padding:10px;
+    border-bottom:1px solid #444;
+    border-left:1px solid #444;
+    text-align:center;
+}
+.container .table td a {
+    margin:0 5px;
+}
+.container .table th:first-child,
+.container .table td:first-child {
+    border-left:none;
+}
+.container .form-group {
+    padding:0 20px;
+    margin:10px 0;
+}
+.container .form-group:after {
+    content:'';
+    display:block;
+    float:none;
+    clear:both;
+}
+.container .text-danger {
+    color:#f00;
+}
+.container .text-center {
+    text-align:center;
+}
+.container .form-group label {
+    float:left;
+    width:100px;
+    height:30px;
+    font-size:14px;
+    line-height:30px;
+}
+.container .form-group div {
+    float:left;
+    height:30px;
+    line-height:30px;
+}
+.container dt {
+    margin:10px 0;
+    font-size:16px;
+    font-weight:bold;
+}
+.container dt:before {
+    content:'◎';
+    padding-right:5px;
+}
+.container dd {
+    padding-left:15px;
+    margin-bottom:30px;
+    border-left:5px solid #d5d5d5;
+    font-size:14px;
+    font-weight:normal;
+}

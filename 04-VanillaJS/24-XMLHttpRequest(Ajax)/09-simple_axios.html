@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <style>
+        #loading {
+            display:none;
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:100px;
+            height:100px;
+            margin-top:-50px;
+            margin-left:-50px;
+            background-image:url(img/loading.gif);
+            background-repeat:no-repeat;
+            background-position:center center;
+            background-size:cover;
+        }
+        #loading.active {
+            display:block;
+        }
+        dt {
+            margin:10px 0;
+            font-size:20px;
+            font-weight:bold;
+        }
+        dt:before {
+            content:'◎';
+            padding-right:5px;
+        }
+        dd {
+            padding-left:15px;
+            margin-bottom:30px;
+            border-left:5px solid #d5d5d5;
+            font-size:16px;
+            font-weight:normal;
+        }
+        #dept-item {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading"></div>
+    <h1>Simple Axios</h1>
+
+    <a href="#" class="mylink" data-deptno="101">컴퓨터공학과</a>
+    <a href="#" class="mylink" data-deptno="102">멀티미디어학과</a>
+    <a href="#" class="mylink" data-deptno="201">전자공학과</a>
+    <a href="#" class="mylink" data-deptno="202">기계공학과</a>
+
+    <dl id="dept-item">
+        <dt>학과번호</dt>
+        <dd class="id"></dd>
+        <dt>학과명</dt>
+        <dd class="dname"></dd>
+        <dt>학과위치</dt>
+        <dd class="loc"></dd>
+    </dl>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const mylink = document.querySelectorAll(".mylink");
+
+        mylink.forEach((v, i) => {
+            v.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                // 로딩바 표시하기
+                const loading = document.querySelector("#loading");
+                loading.classList.add("active");
+
+                // 링크에 숨겨진 data-deptno의 값을 가져옴
+                const deptno = e.currentTarget.dataset.deptno;
+                console.log(deptno);
+                
+                // Ajax 응답 결과를 저장할 JSON
+                let json = null;
+                // HTTP의 4대 접속 방식 GET, POST, PUT, DELETE가 각각 함수로 존재
+                axios
+                    .get(`http://localhost:3000/department/${deptno}`)
+                    //.then(response) => {}
+                    .then(({ data }) => {
+                        //const { data } = response;
+                        // console.log(response);
+                        // 이 값이 백엔드에서 읽어온 내용
+                        console.log(data);
+
+                        document.querySelector(".id").innerHTML = data.id;
+                        document.querySelector(".dname").innerHTML = data.dname;
+                        document.querySelector(".loc").innerHTML = data.loc;
+
+                        document.querySelector("#dept-item").style.display = "block";
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                        console.log(error.response.status);     // 에러코드: 404
+                        console.log(error.response.statusText); // 에러내용: Not Found
+                        console.log(error.response.data);
+                        alert(error.response.statusText);
+                    })
+                    .finally(() => {
+                        // 성공, 실패 여부에 상관 없이 마지막에 실행되는 함수
+                        loading.classList.remove("active");
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
