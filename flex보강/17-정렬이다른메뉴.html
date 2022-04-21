@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            list-style:none;
+        }
+        div,
+        ul,
+        li,
+        body {
+            padding:0;
+            margin:0;
+        }
+        a {
+            color:inherit;
+            text-decoration:none;
+        }
+        .tablist {
+            display:flex;
+            justify-content:space-between;
+            /** flex:0 0 60px; 불필요한 속성 */
+            border:1px solid rgba(0, 0, 0, 0.12);
+            background-color:#fff;
+        }
+        .tab {
+            display:block;
+            position:relative;
+            padding:0 15px;
+            font-weight:bold;
+            line-height:60px;
+        }
+        .tab.selected:after {
+            content:'';
+            position:absolute;
+            bottom:19px;
+            left:13px;
+            right:13px;
+            height:9px;
+            background-color:rgba(0, 209, 69, 0.7)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="tablist">
+            <li>
+                <a href="#" class="tab selected">HOME</a>
+            </li>
+            <li>
+                <a href="#" class="tab">정렬이 다른 메뉴</a>
+            </li>
+            <li>
+                <a href="#" class="tab">MYPAGE</a>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>

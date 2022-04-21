@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            padding:10px 0;
+            margin-top:20px;
+            font-size:20px;
+            text-align:center;
+        }
+        .row_wrap {
+            width:400px;
+            margin:0 auto;
+        }
+        .row {
+            display:flex;
+            padding:10px 0;
+        }
+
+        .txtfield {
+            /** 부모인 .row 안에서 .title_content 가 차지하는 100px을 제외한 나머지 공간을 가득 채움 */
+            flex:1;
+            /** --- */
+            width:300px;
+            height:38px;
+            padding:10px;
+            border:1px solid #06f;
+            background-color:white;
+            font-size:13px;
+            box-sizing:border-box;
+        }
+        .txtfield.big {
+            height:150px;
+        }
+
+        .title_content {
+            display:flex;
+            align-items:center;
+            width:100px;
+            height:40px;
+            font-weight:bold;
+        }
+        .title_content.big {
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui_box">
+        <h3>폼 레이블 수직 중앙정렬</h3>
+        <div class="row_wrap">
+            <div class="row">
+                <span class="title_content">채널 키워드</span>
+                <input type="text" name="search" class="txtfield" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요." />
+            </div>
+            <div class="row">
+                <span class="title_content">Channel keyword</span>
+                <input type="text" name="search" class="txtfield" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요." />
+            </div>
+            <div class="row">
+                <span class="title_content big">채널 키워드</span>
+                <input type="text" name="search" class="txtfield big" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요." />
+            </div>
+            <div class="row">
+                <span class="title_content big">Channel keyword</span>
+                <textarea type="text" name="search" class="txtfield big" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요."></textarea>
+            </div>
+            <div class="row">
+                <span class="title_content big">Channel keyword keyword</span>
+                <textarea type="text" name="search" class="txtfield big" placeholder="키워드와 키워드 사이는 쉼표(콤마)로 구분해주세요."></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
